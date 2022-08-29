@@ -1,39 +1,30 @@
-function Tweet() {
+import CreateImage from './ProfileImage';
+import CreateUser from './User';
+import CreateTime from './Timestamp';
+import CreateMessage from './Message';
+import CreateActions from './Actions';
+
+function Tweet( props) {
+ console.log("prooops",props)
+ console.log("image",props.tweet.user.image)
   return (
     <div className="tweet">
-      <img
-        src="https://i.imgur.com/9yw1Fyw.jpg"
-        className="profile"
-        alt="profile"
-      />
-
+    <CreateImage image={props.tweet.user.image} />
+   
       <div className="body">
         <div className="top">
-          <span className="user">
-            <span className="name">Ironhack</span>
-            <span className="handle">@ironhack</span>
-          </span>
-
-          <span className="timestamp">Nov 30, 2020</span>
-        </div>
-
-        <p className="message">
-          On December 7th, we will be hosting a #webinar that will introduce you
-          to #SQL! Are you ready? 🚀
-        </p>
-
-        <div className="actions">
-          {/* Font Awesome icons */}
-          <i class="far fa-comment"></i>
-          <i class="fas fa-retweet"></i>
-          <i class="far fa-heart"></i>
-          <i class="fas fa-share"></i>
-        </div>
+           <CreateUser userData={props.tweet.user}/>
+           <CreateTime time={props.tweet.timestamp}/>
+          </div>
+          <CreateMessage message ={props.tweet.message}/>
+          <CreateActions/>
       </div>
-
       <i class="fas fa-ellipsis-h"></i>
     </div>
-  );
+    
+    
+  )
+  
 }
 
 export default Tweet;
