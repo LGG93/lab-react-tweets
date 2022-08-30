@@ -1,4 +1,4 @@
-function CreateActions (){
+function Actions (){
     return(
     <div className="actions">
           {/* Font Awesome icons */}
@@ -6,9 +6,8 @@ function CreateActions (){
           <i class="fas fa-retweet"></i>
           <i class="far fa-heart"></i>
           <i class="fas fa-share"></i>
-          <i class="fas fa-ellipsis-h"></i>
         </div>
 );
 }
 
-export default CreateActions;
+export default Actions;

@@ -1,7 +1,7 @@
-function CreateMessage (props){
+function Message (props){
  return (
 <p className="message">
 {props.message}
 </p>
 )}
-export default CreateMessage;
+export default Message;

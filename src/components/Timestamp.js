@@ -1,7 +1,7 @@
-function CreateTime(props){
+function Timestamp(props){
     return(
-        <span className="timestamp">{props.timestamp.time}</span>
+        <span className="timestamp">{props.timestamp}</span>
     )
 };
 
-export default CreateTime;
+export default Timestamp;
